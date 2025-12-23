@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Focus & Bookmark",
+  "version": "1.0",
+  "description": "Hides distracting sidebars and allows you to bookmark timestamps for deep study.",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

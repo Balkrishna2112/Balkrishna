@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>YouTube Focus</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            width: 300px;
+            padding: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            font-size: 16px;
+            color: #333;
+            margin-top: 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #cc0000;
+        }
+
+        .bookmark-list {
+            max-height: 200px;
+            overflow-y: auto;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        .bookmark-item {
+            padding: 8px;
+            background: white;
+            border: 1px solid #eee;
+            margin-bottom: 5px;
+            font-size: 12px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 4px;
+        }
+
+        .bookmark-item:hover {
+            background: #f0f0f0;
+        }
+
+        .time-badge {
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        .error-msg {
+            color: #666;
+            font-size: 11px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>YouTube Focus</h2>
+    <button id="bookmarkBtn">🔖 Bookmark Timestamp</button>
+    <div class="bookmark-list" id="bookmarkList"></div>
+    <div id="statusMsg" class="error-msg"></div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="popup.js"></script>
+</body>
+
+</html>
